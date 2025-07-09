@@ -1,0 +1,230 @@
+/* ==== ABOUT SECTION ==== */
+.about {
+  padding: 5rem 9%;
+  background: linear-gradient(to right, #0F172A, #1E293B);
+  color: #C9D1D9;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==== Heading ==== */
+.about .heading {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #58A6FF;
+}
+
+.about .heading span {
+  color: #FF7B72;
+}
+
+/* ==== Row Layout ==== */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== Image Column ==== */
+.about .image {
+  flex: 1 1 35rem;
+  text-align: center;
+}
+
+.about .image img {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(88, 166, 255, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: imageFadeIn 1.2s ease-in-out;
+}
+
+.about .image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(88, 166, 255, 0.6);
+}
+
+@keyframes imageFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==== Content Column ==== */
+.about .content {
+  flex: 1 1 45rem;
+}
+
+.about .content h3 {
+  font-size: 2.8rem;
+  color: #F0F6FC;
+  margin-bottom: 1rem;
+}
+
+.about .content p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 1rem 0;
+  line-height: 1.7;
+}
+
+/* ==== Buttons Wrapper ==== */
+.about-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==== Button Base Style ==== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==== Contact Button ==== */
+.contact-btn {
+  background: linear-gradient(135deg, #6c63ff, #1db9c3);
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #4f45e4, #17a1b1);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 20px #6c63ffaa;
+}
+
+/* ==== Resume Button ==== */
+.resume-btn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.resume-btn:hover {
+  background: linear-gradient(135deg, #e13f5e, #d7391e);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 20px #ff416caa;
+}
+
+/* ==== Button Icon ==== */
+.btn i {
+  margin-left: 0.7rem;
+  font-size: 1.1rem;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .about {
+    padding: 4rem 6%;
+  }
+
+  .about .content h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .about .content p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+  }
+
+  .about .content,
+  .about .image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .content h3 {
+    font-size: 2.3rem;
+  }
+
+  .about .content p {
+    font-size: 1.4rem;
+  }
+
+  .about-buttons {
+    flex-direction: row; /* buttons side by side */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    width: auto;
+    font-size: 1.4rem;
+    padding: 0.9rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 4%;
+  }
+
+  .about .heading {
+    font-size: 2.5rem;
+  }
+
+  .about .content h3 {
+    font-size: 2rem;
+  }
+
+  .about .content p {
+    font-size: 1.3rem;
+  }
+
+  .about .image img {
+    width: 90%;
+  }
+
+  .about-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    padding: 0.9rem 1.4rem;
+    width: auto;
+  }
+}

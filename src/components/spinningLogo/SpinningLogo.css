@@ -1,0 +1,26 @@
+.logo-screen {
+  height: 100vh;
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  z-index: 20;
+}
+
+.logo-screen.fade-out {
+  opacity: 0;
+}
+
+.logo-img {
+  width: 250px;
+  height: auto;
+  filter: drop-shadow(0 0 15px #00ffe1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}

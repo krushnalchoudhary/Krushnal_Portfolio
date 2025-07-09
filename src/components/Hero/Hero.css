@@ -1,0 +1,305 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.home {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.home #particles-js,
+.hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  z-index: 1;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.home .content h2 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #e0f0ff;
+}
+
+.home .content h2 span {
+  color: #ffb347;
+}
+
+.home .content p {
+  font-size: 2.2rem;
+  color: #d0dfff;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.home .content p span {
+  color: #ff4c4c;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+.home .btn {
+  padding: 1.3rem 2.5rem;
+  border-radius: 3em;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  background: #2506ad;
+  box-shadow: 0px 4px 12px rgba(48, 68, 247, 0.6);
+  font-family: "Nunito", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.home .btn i {
+  margin-left: 0.6rem;
+  font-size: 1.5rem;
+}
+
+.home .btn:hover {
+  background: #1a047e;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 6px 20px rgba(48, 68, 247, 0.7);
+}
+
+.home .btn.download {
+  background-color: #e63946;
+  box-shadow: 0px 4px 12px rgba(230, 57, 70, 0.5);
+}
+
+.home .btn.download:hover {
+  background-color: #a91d2f;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 6px 20px rgba(230, 57, 70, 0.6);
+}
+
+/* Social Icons */
+.socials {
+  position: relative;
+  margin-top: 3rem;
+  z-index: 2;
+  text-align: left;
+}
+
+.social-icons {
+  padding-left: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  display: inline-block;
+  line-height: 42px;
+  width: 42px;
+  height: 42px;
+  color: #00d9ff;
+  background-color: #09011b;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 6px rgba(0, 217, 255, 0.4);
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #00d9ff, 0 0 25px #00d9ff;
+}
+
+.social-icons a.github:hover { background-color: #171515; }
+.social-icons a.twitter:hover { background-color: #1DA1F2; }
+.social-icons a.linkedin:hover { background-color: #007bb6; }
+.social-icons a.telegram:hover { background-color: #0088cc; }
+.social-icons a.instagram:hover { background-color: #c13584; }
+.social-icons a.dev:hover { background-color: #0a0a0a; }
+
+/* Hero Image */
+.home .image {
+  flex: 1 1 40rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .image img {
+  width: 70%;
+  max-width: 350px;
+  border-radius: 50%;
+  margin-left: 6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.8s ease-in-out;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  .home .content,
+  .home .image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home .image img {
+    margin-left: 0;
+    width: 60%;
+    max-width: 300px;
+  }
+
+  .home .content h2 {
+    font-size: 3.5rem;
+  }
+
+  .home .content p {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 2rem 1rem;
+  }
+
+  .home .content h2 {
+    padding-top: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .home .content p {
+    font-size: 1.6rem;
+  }
+
+  .image {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .home .btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+    line-height: 38px;
+  }
+
+  .socials {
+    margin-top: 4rem;
+    text-align: center;
+  }
+}
+/* Image Fade Animations */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Move buttons left on large screens */
+.buttons.left-align {
+  justify-content: flex-start;
+}
+
+/* Default buttons container */
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Mobile: center buttons */
+@media (max-width: 768px) {
+  .buttons.left-align {
+    justify-content: center;
+  }
+}
+
+/* Optional fade smoother look */
+.home .image img {
+  width: 70%;
+  max-width: 350px;
+  border-radius: 50%;
+  margin-left: 6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+

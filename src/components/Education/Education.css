@@ -1,0 +1,157 @@
+/* ===== Root Variables ===== */
+:root {
+  --purple: #8f00ff;
+  --text-light: #ffffff;
+  --text-muted: #cfcfcf;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --blur: blur(20px);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --glass-bg: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --text-light: #111111;
+    --text-muted: #333333;
+  }
+}
+
+/* ===== Education Section ===== */
+.education {
+  padding: 5rem 2rem;
+  background-color: #0d1117;
+  color: var(--text-light);
+  position: relative;
+  z-index: 1;
+  min-height: auto;
+}
+
+.education .heading {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.education .heading i {
+  color: var(--purple);
+  margin-right: 10px;
+}
+
+.education .heading span {
+  color: var(--purple);
+}
+
+/* ===== Card Grid Layout ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Card Styling ===== */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(143, 0, 255, 0.4);
+}
+
+
+
+/* ===== Content Section ===== */
+.card-content {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--purple);
+}
+
+.institution {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* ===== Responsive Typography ===== */
+@media (max-width: 480px) {
+  .education .heading {
+    font-size: 2.2rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+}
+.education {
+  padding: 5rem 2rem;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+.education .heading {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.education .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.education .card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.education .card-content h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #8f00ff;
+}
+
+.education .institution {
+  font-size: 1.4rem;
+  color: #cfcfcf;
+  margin-bottom: 0.8rem;
+}
+
+.education .description {
+  font-size: 1.5rem;
+  color: #d1d1d1;
+}
